@@ -2,7 +2,6 @@ const express = require('express');
 const cookieParser = require('cookie-parser')
 const logger = require('morgan');
 const cors= require('cors');
-//const createError = require('http-errors');
 
 require('./db');
 

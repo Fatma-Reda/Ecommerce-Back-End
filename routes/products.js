@@ -48,7 +48,11 @@ router.get("/user/:userid", async (req, res, next) => {
 });
 
 router.patch("/:productid", async (req, res, next) => {
-  let product = await Product.findByIdAndUpdate(req.params.productid, req.body);
+  let product = await Product.findById(req.params.productid);
+  if (product.userid.toHexString() !== req.user._id.toHexString()) {
+    // !product.userid.equals(req.user._id)
+    next(new Error("not-authorized"));
+  }
   res.send(product);
 });
 
