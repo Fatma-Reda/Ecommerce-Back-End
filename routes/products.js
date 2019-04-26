@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Product = require("../models/productschema");
+const Product = require("../models/products");
 const createError = require("http-errors");
 const authenticationMiddleware = require("./../middlewares/authentication");
 

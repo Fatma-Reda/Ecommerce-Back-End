@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const User = require("../models/userschema");
+const User = require("../models/users");
 const createError = require("http-errors");
 const authenticationMiddleware = require("./../middlewares/authentication");
 

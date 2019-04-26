@@ -1,5 +1,5 @@
 const createError = require('http-errors');
-const User = require('./../models/userschema');
+const User = require('../models/users');
 
 module.exports = async (req, res, next) => {
     try {
